@@ -1,0 +1,13 @@
+/*!*/
+@charset "utf-8";
+
+body {
+  margin: 0;
+}
+
+article {
+  border: 1px solid ##454545;
+}
+article h2 {}
+article img {}
+article p {}

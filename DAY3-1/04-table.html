@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Table</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <h2>문서 메타 데이터 표</h2>
+
+  <p id="metadata-table-summary">4행 3열로 구성된...</p>
+  <table aria-decribedby="metadata-table-summary">
+    <caption>HTML 문서 메타 데이터 표</caption>
+    <!-- 행: table row -->
+    <thead>
+      <tr>
+        <!-- 셀 제목: table cell header -->
+        <th scope="col">Element</th>
+        <th scope="col">Description</th>
+        <th scope="col">Support</th>
+      </tr>
+    </thead>
+    <!-- 컬럼 합치기: colspan -->
+    <!-- <tfoot>
+      <tr>
+
+      <td colspan="3">Total Count</td>
+    </tfoot> -->
+    <tr>
+      <th scope="row">
+        <code>&lt;base&gt;</code>
+      </th>
+      <!-- 셀 내용: table cell data -->
+      <td>
+        <!-- abbreviation -->
+        HTML base 요소 (<code>&lt;base&gt;</code>)는 문서에 포함된 모든 상대
+        <a target="_blank" href="https://ko.wikipedia.org/wiki/URL"><abbr title="Uniform Resource Locator">URL</abbr></a>들의 기준 <abbr>URL</abbr>을 나타냅니다.
+        한 문서에 하나의 <code>&lt;base&gt;</code> 요소만이 올수 있습니다.
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html  표</title>
+    <style>
+        /*축약 요소에 마우스가 올라가면 UI 커서 모양이 도움말 표시됨 */
+        abbr[title] {
+            cursor: help;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        table, th, td {
+            /*테두리 디자인*/
+            border: 1px solid #fe4940;
+        }
+    </style>
+</head>
+<body>
+    <h2>문서 메타데이터 표</h2>
+
+    <p id="metadata-table-summary">본 표는 4행 3열로 구성ㄷ
+    <table aria-describedby="metadata-table-summary">
+      <caption>적절한 테이블 제목</caption>
+
+
+    <thead>
+        <tr>
+            <th>Element</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td></td>
+        </tr>
+    </tfoot>
+    <tbody>
+
+
+    </tbody>
+        <tr>
+            <th>
+                <code>&lt;base&gt;</code>
+            </th>
+
+            <td>
+
+                HTML Base요소 (<code>&lt;base&gt;</code>)는 문서에 포함된 모든 상대 <a target="_blank" href="https://ko.wikipedia.org/wiki/URL"><abbr title="Uniform Resource Locator">URL</abbr>을 나타냅니다.
+                한 문서에 하나의 요소만 볼 수 있습니다.
+            </td>
+            <td><abbr title="Hyper Text Markup Language"> </td>
+        </tr>
+    </table>
+</body>
+</html>

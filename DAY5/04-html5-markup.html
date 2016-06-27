@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>(X) HTML vs HTML5 Markup</title>
+  <script>
+    // 문서에  input 요소를 생성한다
+    // 생성한 요소를 변수 my_num_input에 참조한다.
+    var my_num_input= document.createElement('input');
+    // 변수 my_num_inpup에 참조된 문서 객체 input 요소에 속성(Attribute)을 설정(set) 한다.
+     my_num_input.setAttribute('type', 'number');
+     // 조건(my_num_input 요소의 type 속성 값이 'text' 인가?) 확인
+     if ( my_num_input.getAttribute('type') === 'text') {
+      // input[type="number"]를 지원하지 않는 브라우저 대응하는 코드
+      console.log('input "number" 유형을 지원하지 않습니다.');
+     } else {
+      console.log('input "number" 유형을 지원합니다.');
+     }
+  </script>
+</head>
+<body>
+
+
+
+  HTML5에서는 <a> 요소가 블록 요소를 감쌀 수 있도록 변경되었지만, 내부에 또 다른 클릭 가능 요소
+
+  <!-- XHTML Markup -->
+  <!-- #header+#gnb+#main+#sidebar+#footer -->
+  <div id="header"></div>
+  <div id="gnb"></div>
+  <div id="main"></div>
+  <div id="sidebar"></div>
+  <div id="footer" ></div>
+
+
+  <!-- HTML5 Markup -->
+  <!-- #header+#gnb+#main+#sidebar+#footer -->
+  <!-- ID 는 가급적 쓰지 말고 Aria 제외
+  그러나 고유한 이름을 가진다 -->
+  <!-- class는 ID와 다르게 사용되며 주로 쓰이는 tag -->
+  <head></head>
+  <!-- main은 한 번만 쓰일 수 있다 -->
+  <main></main>
+  <nav></nav>
+section(범용) vs article(독립적)
+  <section>
+    <article></article>
+  </section>
+
+  <aside></aside>
+  <footer class="page-footer"></footer>
+
+</body>
+</html>
