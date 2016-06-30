@@ -1,0 +1,25 @@
+/*마진이 상하 방향으로 겹쳐지는 현상*/
+
+h1 {
+  font-weight: bolder;
+  font-weight: 900; /*100 - 400(normal) -700(bold) - 900(bolder) */
+  font-size: 2.2em;
+  margin-bottom: 1.88em; /* 30px */
+}
+
+p {
+  color: #323130;
+  font-size: 0.875em; /* 14px */
+}
+
+p a {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #000;
+  color: #fff;
+}
+
+p span {
+  background: #f00;
+  color: #ffo;
+}

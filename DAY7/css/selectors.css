@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+/*@import url("common.css");*/
+
+/*
+속성 선택자
+
+[attr]
+[attr="value"]
+[attr|="value"]
+[attr~="value"]
+[attr*="value"]
+
+*/
+
+/*공백으로 구분되는 단어가 일치할 때 선택*/
+[class~="container"] {
+  border: 1px dashed #cacaca;
+  padding: 1em:;
+}
+
+/*하이픈(-)으로 구분되는 단어가 일치할 때 선택 */
+[lang|="en"] {
+  text-decoration: underline;
+}
+
+
+/*상태 디자인(State Design) selector
+p:는 when
+
+기본 상태(Normal)
+커서가 올라간 상태(Hover)
+커서로 누른 상태(Active)
+*/
+
+
+/*기본 상태(Normal)*/
+.container p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.88em;
+  color: #84888a;
+  background: #fff;
+}
+
+/*커서가 올라간 상태(Hover)*/
+/*Pseudo Class: 가상(유사, 의사) 클래스*/
+.container p:hover {
+  color: #0c0d0d;
+  background: #bfbfbf;
+}
+
+/*커서로 누른 상태(Active)*/
+.container p:active {
+  background-color: #ffff9c;
+  color: #000
+}
+
+.page p:hover {
+  color: :;
+}
+
+
+/*
+하이퍼링크
+상태 디자인
+가상(유사, 의사) 클래스
+Pseudo Class
+
+:link |기본 상태
+:visited |방문한 상태
+:hover |커서 올라간 상태
+:active |커서로 누르고 있는 상태
+:focus |키보드 포커싱 상태
+
+상대값을 쓰기를 권장; em
+cmd+sft+y
+*/
+
+
+/*기본상태*/
+/*a.link {}*/
+a {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  text-decoration: none;
+  color: #363636;
+}
+
+/*방문한 상태*/
+a:visited {
+  color: #bfbfbf;
+  background: #fff;
+}
+
+
+/*방문한 상태*/
+a:visited {
+  color: #fc424b;
+}
+
+/*커서 올라간 상태*/
+a:hover {
+  /*text-decoration: underline;*/
+  padding-bottom: 3px;
+  border-bottom: 2px dotted;
+}
+/*커서로 누른 상태*/
+a:active {
+  background: #ff0;
+}
+
+/*키보드 포커싱 상태*/
+a:focus {
+  outline: 3px solid #fc414b;
+}
+
+a:focus:hover {
+  outline-offset: 10px;
+}
+
+/*.box*/
+.box {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 200px;
+  height: 200px;
+  ourline: none;
+  background: #efefef;
+}
+
+.box:hover {
+  outline: 10px solid #fe4940;
+}
+
+/*.rounded-box*/
+.rounded-box {
+  width: 200px;
+  background: #eee;
+}
+
+.rounded-box > *:first-child{}
+.rounded-box:last-child{}
+
+.wrapper:last-child{}
+
+
+/*
+가상 클래스(:) :lang(en) {}는
+[lang|="en"] {} 와 같다
+*/
+
+:lang(ja) {
+  /*일본어 사용*/
+}
+
+:lang(es) {
+  /*스페인어 사용*/
+}
+
+
+/*
+가상(유사, 의사) 요소
+Pseudo Element
+가상으로 요소(콘텐츠)를 만들어 줍니다.
+
+CSS2,             CSS3
+:first-line     ::first-line
+:first-letter
+:before
+:after
+*/
+
+/*잡지 디자인 드롭캣*/
+.dropcap-demo {
+  color: #ec0904;
+}
+
+/*드롭캣 요소를 가상으로 꾸미겠다*/
+.dropcap::first-letter {
+/*.dropcap::first-letter {*/
+  font-size: 300%;
+  color: #ec0904;
+  line-height: 1;
+}
+
+.dropcat {
+  margin: 0;
+}
+
+/*
+가상 요소
+::before
+::after
+*/
+
+abbr {
+  cursor: help;
+}
+
+.msg .before,
+.msg::before {
+  content: 'Hey!!';
+  color: #3a0099;
+}
+
+.msg .after;
+.msg.after {
+  content: 'Hand Up!';
+  color: #3a0099;
+}
+
+@media print {
+  /*접근성 관점에서 링크의 주소를 출력하는 스타일*/
+  a::after {
+  /*함수: () 안에 전달하는 무엇을 통해 뭔가를 처리해서 결과를 보여준다.*/
+    content: '(' attr(href) ')';
+ /*   content: '(this is link.)';  */
+    color: #fc4a54;
+  }
+
+  abbr::after {
+    content: '(' attr(title) ')';
+  }
+}
+
+/*HTML <html>, XML <cook>, <book>*/
+:root {}
+
+/**
+ * --------------------------------
+ * :not(selector)
+ * ----------------------------- */
+
+.parent {
+  background: #ff0;
+}
+
+/*.parent * {
+  border: 1px solid #b64926;
+}
+.parent a {
+  border: none;
+}*/
+
+.parent :not(a):not(li):not(.child) {
+  border: 1px solid #b64926;
+}
+
+/*
+사용자가 커서로 클릭 후, 텍스트 블록을 선택할 경우 가상으로 요소를 만들어 디자인
+
+color
+background-color
+cursor
+outline
+text-decoration
+text-emphasis-color
+text-shadow
+*/
+
+::-moz-selection {
+  background: #fc4b55;
+  color: #fff;
+}
+
+::selection {
+  background: #fc4b55;
+  color: #fff;
+  cursor: #fff;
+  text-shadow: 2px 2px 8px #6300b5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

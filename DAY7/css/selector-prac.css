@@ -1,0 +1,8 @@
+
+.parent {
+  background: #ff0;
+}
+
+.parent :not(a):not(li):not(.child) {
+  border: 1px solid #b64926;
+}

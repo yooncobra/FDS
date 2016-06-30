@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Vertical Centering using CSS</title>
+
+  <style>
+
+  .text, .image, .block {
+    display: table-cell;
+    width: 14em;
+    height: 8em;
+    margin: 0.5em;
+    border: thick solid;
+    background: #fff;
+  }
+  .text {
+    border-color: #99f;
+  }
+
+  .image {
+    border-color: #f99;
+  }
+  .image img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .block {
+    color: #ff4;
+  }
+  .block div {
+    border:dashed;
+    width: 10em;
+    color: #000;
+  }
+
+  .vertical-align {
+    line-height: 8em;
+  }
+
+  div, img {
+    vertical-align: middle;
+  }
+
+
+  </style>
+</head>
+<body>
+
+<!-- common code of examples -->
+  <div class="text">
+    <span>Some Text</span>
+  </div>
+
+  <div class="image">
+    <img src="blue.gif" alt="blue square">
+  </div>
+
+  <div class="block">
+    <div> block element, with long enough content to wrap.</div>
+  </div>
+
+<!-- using line-height -->
+    <div class="text">
+      <div class="vertical-align">
+          <span>Some Text</span>
+      </div>
+  </div>
+
+  <div class="image">
+    <div class="vertical-align-block">
+      <img src="blue.gif" alt="blue square">
+    </div>
+  </div>
+
+
+
+</body>
+</html>

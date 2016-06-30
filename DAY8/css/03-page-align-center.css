@@ -1,0 +1,53 @@
+
+
+.page {
+  width: 500px;
+ /* width: auto; */
+
+  /*height: 100vh;  vh= viewport height*/
+  height: 333px;
+  margin: 100px auto;
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+  background: #7045cf;
+}
+
+.page::before {
+  display: block;
+  content: attr(class);
+  color: #fff;
+  font-size: 1.375em;
+}
+
+
+/*inner page*/
+
+.inner-page {
+
+  width: 250px;
+  height: 111px;
+  line-height: 100px;
+  background: #f3a647;
+}
+
+.inner-page::before {
+  display: block;
+  content: attr(class);
+  color: #fff;
+  font-size: 1em;
+}
+
+
+
+.change-display
+
+
+/*margin 속기형(Short property)*/
+
+p {
+  margin-top: 1em;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+
+}

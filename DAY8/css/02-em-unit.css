@@ -1,0 +1,76 @@
+
+/*em 단위의 사용 어려움
+*/
+
+html {
+  font-size: 100%;
+}
+
+/*미디어 기술 사용 @media
+CSS 미디어쿼리 @media 환경 and 조건1 and  조건2
+중단점 (breakpoint) 설계(Design)
+--1-- 600 --2-- 1000 --3--
+*/
+@media only screen and (max-width: 37.5rem) {
+  body::before {
+    content: '스크린의 폭이 600px 보다 작습니다'
+  }
+  body {background: #000;}
+}
+
+@media only screen and (max-width: 37.5625rem) and (max-width: 1000px){
+  body::before {
+    content: '스크린의 폭이 601px 보다 크고 1000px 보다 작습니다'
+  }
+  body {background: #888;}
+}
+
+@media only screen and (max-width: 62.5625rem) {
+  body::before {
+    content: '스크린의 폭이 1001px 보다 큽니다'
+  }
+  body {background: #fff;}
+}
+
+body {
+  font-size: 87.5%;
+}
+
+/*rem*/
+
+
+div {
+  width: 70%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px dashed #fff;
+  padding: 5%;
+  color: #fff;
+}
+
+.wrapper-parent {
+  font-size: 40px;
+  /*font-size: 2.5em;*/
+  /*1em = 14px*/
+  font-size: 2.5rem;
+  background: #7045cf;
+}
+.parent         {
+  font-size: 30px;
+  /*font-size: 1.88em;*/
+  font-size: 1.88rem;
+  background: #724fb7;
+}
+.child          {
+  font-size: 20px;
+  /*font-size: 1.25em;*/
+  font-size: 1.25rem;
+  background: #9077c4;
+}
+.inner-child    {
+  font-size: 10px;
+  /*font-size: 0.63em;*/
+  font-size: 0.63rem;
+  background: #b0a6c4;
+}
